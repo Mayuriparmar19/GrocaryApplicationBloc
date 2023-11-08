@@ -1,21 +1,21 @@
 part of 'home_bloc.dart';
 
  @immutable
-abstract class HomeSate {}
+abstract class HomeState {}
 
-abstract class HomeActionState extends HomeSate {}
+abstract class HomeActionState extends HomeState {}
 
-class HomeInitialState extends HomeSate {}
+class HomeInitialState extends HomeState {}
 
-class HomeLoadingState extends HomeSate {}
+class HomeLoadingState extends HomeState {}
 
-class HomeLoadedState extends HomeSate {
+class HomeLoadedState extends HomeState {
   final List<ProductDataModel> products;
 
-  HomeLoadedState(this.products);
+  HomeLoadedState({required this.products});
 }
 
-class HomeErrorState extends HomeSate {}
+class HomeErrorState extends HomeState {}
 
 class HomeNavigateToWishlistPageActionState extends HomeActionState {}
 

@@ -17,6 +17,6 @@ class HomeProductCartButtonClickedEvent extends HomeEvent {
   HomeProductCartButtonClickedEvent({required this.clickedProduct});
 }
 
-class  HomeWishlistButtonNavigateEvent extends HomeEvent {}
+class HomeWishlistButtonNavigateEvent extends HomeEvent {}
 
-class  HomeCartButtonNavigateEvent extends HomeEvent {}
+class HomeCartButtonNavigateEvent extends HomeEvent {}
