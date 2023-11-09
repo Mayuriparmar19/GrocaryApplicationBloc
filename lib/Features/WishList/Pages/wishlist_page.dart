@@ -10,6 +10,11 @@ class WishListScreen extends StatefulWidget {
 class _WishListScreenState extends State<WishListScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return  Scaffold(
+
+      appBar:  AppBar(
+        backgroundColor: Colors.teal,
+        title: const Text('WishList Screen'),),
+    );
   }
 }
