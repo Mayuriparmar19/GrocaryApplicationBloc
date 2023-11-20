@@ -17,25 +17,24 @@ class _CartScreenState extends State<CartScreen> {
     cartBloc.add(CartInitialEvent());
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-            appBar: AppBar(
-              backgroundColor: Colors.teal,
-              title:const Text(('Cart Items'),),
-            ),
-           body: BlocConsumer<CartBloc,CartState>(
-             bloc: CartBloc(),
-             listener: (context,state){
-
-             },
-             listenWhen:  (previous,current) => current is CartActionState,
-             buildWhen:  (previous,current)  => current is CartActionState,
-             builder: (context,state){
-               return Container();
-             },
-
-           )
-    );
+        appBar: AppBar(
+          backgroundColor: Colors.teal,
+          title: const Text(
+            ('Cart Items'),
+          ),
+        ),
+        body: BlocConsumer<CartBloc, CartState>(
+          bloc: CartBloc(),
+          listener: (context, state) {},
+          listenWhen: (previous, current) => current is CartActionState,
+          buildWhen: (previous, current) => current is CartActionState,
+          builder: (context, state) {
+            return Container();
+          },
+        ));
   }
 }

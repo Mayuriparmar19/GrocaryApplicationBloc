@@ -54,7 +54,7 @@ class _HomeState extends State<Home> {
             return Scaffold(
               appBar: AppBar(
                 backgroundColor: Colors.teal,
-                title: const Text('Grocery App'),
+                title: const Text(' My Grocery App'),
                 actions: [
                   IconButton(
                       onPressed: () {
@@ -78,7 +78,7 @@ class _HomeState extends State<Home> {
             );
 
           case HomeErrorState:
-            return const Scaffold(body: Center(child: Text('Error')));
+            return const Scaffold(body: Center(child: Text('Some thing went wrong...Please try again')));
           default:
             return const SizedBox();
         }
