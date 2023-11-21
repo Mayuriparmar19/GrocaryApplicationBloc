@@ -1,3 +1,4 @@
-part of'wishlist_bloc.dart';
+part of 'wishlist_bloc.dart';
 
-abstract class WishListEvent{}
+abstract class WishListEvent {}
+

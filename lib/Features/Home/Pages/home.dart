@@ -38,8 +38,14 @@ class _HomeState extends State<Home> {
           ScaffoldMessenger.of(context)
               .showSnackBar(const SnackBar(content: Text('Item Carted')));
         } else if (state is HomeProductItemWishlistedActionState) {
-          ScaffoldMessenger.of(context)
-              .showSnackBar(const SnackBar(content: Text('Item Wishlisted')));
+          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+              backgroundColor: Colors.green,
+              content: Text(
+                'Item Wishlisted',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              )));
         }
       },
       builder: (context, state) {
@@ -78,7 +84,13 @@ class _HomeState extends State<Home> {
             );
 
           case HomeErrorState:
-            return const Scaffold(body: Center(child: Text('Some thing went wrong...Please try again')));
+            return const Scaffold(
+                body: Center(
+                    child: Text(
+              'Some thing went wrong... \n Please try again',
+              style: TextStyle(
+                  color: Colors.red, fontSize: 25, fontWeight: FontWeight.bold),
+            )));
           default:
             return const SizedBox();
         }

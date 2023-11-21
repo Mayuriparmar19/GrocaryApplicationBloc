@@ -14,7 +14,7 @@ class ProductTileWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         margin: const EdgeInsets.all(10),
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 8),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           border: Border.all(color: Colors.black),
@@ -23,7 +23,7 @@ class ProductTileWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              height: 200,
+              height: 230,
               width: double.maxFinite,
               decoration: BoxDecoration(
                   image: DecorationImage(
@@ -41,7 +41,7 @@ class ProductTileWidget extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("${productDataModel.price}",
+                Text(productDataModel.price,
                     style: const TextStyle(
                         fontSize: 18, fontWeight: FontWeight.bold)),
                 Row(
